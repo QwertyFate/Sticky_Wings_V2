@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+ 
+import React, {useState} from 'react'; 
+import ReactDOM from 'react-dom'; 
+ 
+const ListItems = (props) => {
+  return <li>{props.animal}</li>
+}
 
-function App() {
+const List = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ul>
+      {props.animals.map((animal)=> {
+        return <ListItems key = {animal} animal = {animal}  />
+      })}
+    </ul>
+  )
+}
+
+
+const App=()=>{
+  const animals = ["Lion", "Cow", "Snake", "Lizard"];
+
+  return (
+    <div>
+      <h1>This are some animals:</h1>
+      <List animals={animals}/>
     </div>
-  );
+  )
 }
 
 export default App;
