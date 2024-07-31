@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gochi+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.red {
+    color: #fff;
+}
+
+.GoogleMap {
+    height: 50vh;
+    width: 100%;
+    background-color: antiquewhite;
+    margin-right:5vw ;
+    margin-bottom: 10vh;
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.LocationInfo {
+    width: 100%;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: "Bebas Neue";
+    margin-top: -8vh;
+    margin-left: -5vw;
+    
+}
+
+.ContactUs {
+    font-size: 5em;
+}
+
+.BuildingPic {
+position: relative;
+margin-top: -15vh;
+margin-left: -10vw;
+}
+
+
+.LocationDivider {
+    display: flex;
+    flex-direction: row;
+}
+
+.contactPic {
+    width: 4vw;
+}
+
+.AddressIcon {
+    width: 4vw;
+}
+.facebookIcon {
+    width: 2.5vw;
+}
+
+.InstagramIcon {
+    width: 4.5vw;
+}
+
+
+.facebookLink {
+    text-decoration: none;
+}
+
+.DescriptionforContact {
+    position: absolute;
+    left: 14vw;
+    font-size: 1.5em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.Description2forContact {
+    position: absolute;
+    left: 14.8vw;
+    font-size: 1.5em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 5vh;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Description3forContact {
+    position: absolute;
+    left: 13.8vw;
+    font-size: 1.5em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 11.5vh;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Instagramlink {
+    margin-left: 0.58vw;
+}
+
+.Address {
+    margin-left: 0.80vw;
+}
+
+.atSticky {
+    margin-left: 1.5vw;
+}

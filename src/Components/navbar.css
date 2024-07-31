@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gochi+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navigationBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.Menu {
+height: 100px;
+width: 60%;
+background: #0c0c0c;
+padding: 10px auto;
+display: flex;
+border-radius: 2px;
+align-items: center;
+justify-content: space-evenly;
+z-index: 999;
+}
+
+.logoPic {
+    width: 100px;
+    margin-left: 4vw;
+}
+
+.burgerBtn {
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    color: #fff;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    margin-right: 4vw;
+
+}
+
+.burgerBtn:hover{
+    color: #d4d4d4;
+}
+
+.MenuList {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.MenuListItem {
+    color: #fff;
+    margin-left: 6vw;
+    font-family: "Bebas Neue";
+    font-size: 30px;
+}

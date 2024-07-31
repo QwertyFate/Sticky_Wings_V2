@@ -1,0 +1,23 @@
+
+.SelectionGroup {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectionContainer {
+    background-color: aliceblue;
+    border-style: outset;
+    position: relative;
+    height: 50vh;
+    width: 20vw;
+    text-align: center;
+    margin: auto 9vw auto auto;
+    border: 3px solid red;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}

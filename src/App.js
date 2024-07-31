@@ -1,31 +1,29 @@
  
 import React, {useState} from 'react'; 
 import ReactDOM from 'react-dom'; 
- 
-const ListItems = (props) => {
-  return <li>{props.animal}</li>
-}
+import "./App.css"
+import NavBar from './Components/navBar.js'; 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
+import LandingPage from "./Pages/LandingPage.js"
+import MenuPage from './Pages/Menu.js';
 
-const List = (props) => {
+const App=()=> {
   return (
-    <ul>
-      {props.animals.map((animal)=> {
-        return <ListItems key = {animal} animal = {animal}  />
-      })}
-    </ul>
+    <Router>
+    <Routes>
+      <Route path='/' element={<NavBar />} >
+      <Route index element={<LandingPage />} />
+      <Route path='/Menu' element={<MenuPage />}></Route>
+      </Route>
+    </Routes>
+      
+    </Router>
   )
-}
-
-
-const App=()=>{
-  const animals = ["Lion", "Cow", "Snake", "Lizard"];
-
-  return (
-    <div>
-      <h1>This are some animals:</h1>
-      <List animals={animals}/>
-    </div>
-  )
-}
+};
 
 export default App;
