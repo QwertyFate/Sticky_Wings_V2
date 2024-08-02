@@ -1,23 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
-.SelectionGroup {
-    display: flex;
-    flex-direction: row;
+.OrderNowContainer {
+    margin-top: 45px;
     width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.OrderNowPic {
+    width: 100%;
+}
+
+.OrderNowButtonContainer{
+    position: absolute;
+    top: 198vh;
+    left: 14vw;
+}
+
+.OrderNowButton {
+    width: 300px;
+    height: 100px;
+    background: url("./pics/background_order_now.jpg");
+    background-size: 400px 100px;
+    border-radius: 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.SelectionContainer {
-    background-color: aliceblue;
-    border-style: outset;
-    position: relative;
-    height: 50vh;
-    width: 20vw;
-    text-align: center;
-    margin: auto 9vw auto auto;
-    border: 3px solid red;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-
+.ButtonInfo {
+    font-family: "Bangers";
+    color: #161010;
+    font-size: 35px;
+    text-shadow: 2px 2px #fff;
 }

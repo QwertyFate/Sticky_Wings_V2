@@ -1,6 +1,7 @@
 import React from "react";
 import LandingImage from "../Components/pics/Sticky_Wings_Landing_Page_2_Version_3.png";
 import LandingImage2 from "../Components/pics/Sticky_Wings_Cold_Brew_Landing_Page_for_web.png";
+import BlockImage from "./pics/block.png";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 import 'react-multi-carousel/lib/styles.css';
@@ -32,6 +33,7 @@ import './carousel.css'
       };
     
     return(
+        <>
         <Carousel 
         arrows={false}
         responsive={responsive}
@@ -46,6 +48,8 @@ import './carousel.css'
             <div><Link to="/Menu"><img className="LandingPageImg" src={LandingImage} /></Link></div>
             <div><img className="LandingPageImg2" src={LandingImage2} /></div>
         </Carousel>
+        <div className="BlockImg"><img src={BlockImage}/></div>
+        </>
       );
   };
 

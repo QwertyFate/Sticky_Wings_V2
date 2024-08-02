@@ -1,7 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gochi+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 .red {
     color: #fff;
+}
+
+.runningMario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.BulletBill {
+    width: 100px;
+    padding-right: 20px;
+}
+
+.LocationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5vh;
+    align-items: center;
+    
 }
 
 .GoogleMap {
@@ -12,13 +40,6 @@
     margin-bottom: 10vh;
 }
 
-.divider {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
 
 .LocationInfo {
     width: 100%;
@@ -26,19 +47,23 @@
     align-items: center;
     text-align: center;
     font-family: "Bebas Neue";
-    margin-top: -8vh;
+    margin-top: -20vh;
     margin-left: -5vw;
+    display: flex;
+    flex-direction: column;
     
 }
 
 .ContactUs {
     font-size: 5em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .BuildingPic {
-position: relative;
-margin-top: -15vh;
-margin-left: -10vw;
+    z-index: -1;
+    position: absolute;
+    left: -13vw;
 }
 
 
@@ -48,67 +73,100 @@ margin-left: -10vw;
 }
 
 .contactPic {
-    width: 4vw;
+    width: 100px;
+}
+
+
+.DescriptionsforContact {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.DescriptionforContact {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    color: #fff;
+    align-items: center;
+    justify-content: left;
+}
+
+.DescriptionforContact:hover {
+    color: bisque;
+}
+
+.GoogleMapLink, .facebookLink, .InstagramLink {
+    text-decoration: none;
 }
 
 .AddressIcon {
-    width: 4vw;
-}
-.facebookIcon {
-    width: 2.5vw;
-}
-
-.InstagramIcon {
-    width: 4.5vw;
+    width: 67px;
+    height: 50px;
+    padding-right: 20px;
 }
 
-
-.facebookLink {
-    text-decoration: none;
-}
-
-.DescriptionforContact {
-    position: absolute;
-    left: 14vw;
-    font-size: 1.5em;
+.AddressText, .facebookText, .InstagramText, .TelephoneText {
     justify-content: center;
-    display: flex;
     align-items: center;
-    color: #fff;
+    display: flex;
+    text-decoration: none;
 }
 
 .Description2forContact {
-    position: absolute;
-    left: 14.8vw;
     font-size: 1.5em;
-    justify-content: center;
+    color: #fff;
     display: flex;
     align-items: center;
-    margin-top: 5vh;
-    text-decoration: none;
-    color: #fff;
+    justify-content:center;
+    flex-direction: row;
+}
+
+.Description2forContact:hover {
+    color: bisque;
+}
+
+.facebookIcon {
+    width: 50px;
+    padding-right: 10px;
 }
 
 .Description3forContact {
-    position: absolute;
-    left: 13.8vw;
     font-size: 1.5em;
-    justify-content: center;
+    color: #fff;
     display: flex;
     align-items: center;
-    margin-top: 11.5vh;
-    text-decoration: none;
+    justify-content:center;
+    flex-direction: row;
+}
+
+.Description3forContact:hover {
+    color: bisque;
+}
+
+.InstagramIcon {
+    width: 50px;
+    padding-right: 10px;
+}
+
+.Description4forContact{
+    font-size: 1.5em;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+}
+.Description4forContact:hover {
+    color: bisque;
 }
 
-.Instagramlink {
-    margin-left: 0.58vw;
+.TelephoneIcon {
+    width: 76px;
+    padding-left: 10px;
 }
 
-.Address {
-    margin-left: 0.80vw;
+.TelephoneLink {
+    text-decoration: none;
 }
 
-.atSticky {
-    margin-left: 1.5vw;
-}

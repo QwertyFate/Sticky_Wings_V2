@@ -1,0 +1,5 @@
+.BlockImg {
+    position:absolute;
+    top: 110.5vh;
+    z-index: -1;
+}
