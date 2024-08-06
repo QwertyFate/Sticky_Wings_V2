@@ -11,6 +11,7 @@
 
 .BulletBill {
     width: 100px;
+    height: auto;
     padding-right: 20px;
 }
 

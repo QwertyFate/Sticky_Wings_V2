@@ -18,6 +18,7 @@
     position: absolute;
     top: 198vh;
     left: 14vw;
+    cursor: pointer;
 }
 
 .OrderNowButton {
@@ -29,11 +30,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
+
 
 .ButtonInfo {
     font-family: "Bangers";
     color: #161010;
     font-size: 35px;
     text-shadow: 2px 2px #fff;
+}
+
+.OrderNowButtonContainer:hover {
+    .ButtonInfo{
+    font-size: 40px;
+    text-shadow: 2px 2px #ec2020;
+    }
 }

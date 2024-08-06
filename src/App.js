@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom';
 import LandingPage from "./Pages/LandingPage.js"
 import MenuPage from './Pages/Menu.js';
+import DeliveryPage from './Pages/DeliveryPage.js';
 
 const App=()=> {
   return (
@@ -19,6 +20,7 @@ const App=()=> {
       <Route path='/' element={<NavBar />} >
       <Route index element={<LandingPage />} />
       <Route path='/Menu' element={<MenuPage />}></Route>
+      <Route path='/Delivery' element={<DeliveryPage />}></Route>
       </Route>
     </Routes>
       

@@ -1,5 +1,18 @@
-.BlockImg {
-    position:absolute;
-    top: 110.5vh;
-    z-index: -1;
+
+
+@media (max-width: 1000px) {
+
+    .ImgContainer {
+        top: 90px;
+
+    }
+
+    .LandingPageImg {
+        width: 100vw;
+        height: auto
+    }
+    .LandingPageImg2{
+        width: 100vw;
+        height: auto;
+    }
 }
