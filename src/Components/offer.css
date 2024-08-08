@@ -8,12 +8,17 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 5vh;
+
+    @media screen and (max-width: 800px) {
+        margin-top: 10vh;
+    }
 }
 
 .offerHead {
     display: flex;
     font-family: "Bebas Neue";
     font-size: 100px;
+    color: #fff;
 }
 
 .offerFirstCol {
@@ -22,14 +27,26 @@
     width: 100vw;
     list-style: none;
     justify-content: center;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 6vw ;
+    }
+
+    @media screen and (min-width: 801px) and (max-width: 1600px) {
+        flex-direction: row;
+        align-items: center;
+        padding-right: 6vw ;
+    }
 }
 
 .card {
+    cursor: pointer;
     display: flex;
     margin: 4vh 4vw;
     width: 250px;
     height: 400px;
-    border: 5px solid red;
     justify-content: space-between;
     flex-direction: column;
 
@@ -62,4 +79,19 @@
     width: 100%;
     text-align: center;
     font-size: 40px;
+    font-family: "Bebas Neue";
+    color: #fff;
 }
+.insideContainer {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 801px) and (max-width: 1500px) {
+        flex-direction: column;
+    }
+}
+

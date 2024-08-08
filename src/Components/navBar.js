@@ -23,8 +23,8 @@ const DesktopNavBar = ({buttonChange, Changebutton}) => {
                     <div>
                         <ul className="MenuList">
                         <Link className="MenuListItem" to="/"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}} >Home</motion.li></Link>
-                        <Link className="MenuListItem" to="/Menu"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
-                        <Link className="MenuListItem" to="/Menu"> <motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Delivery</motion.li></Link>
+                        <Link className="MenuListItem" to="/Delivery"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
+                        <Link className="MenuListItem" to="/Cart"> <motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>View Cart</motion.li></Link>
                             
                         </ul>
                     </div>
@@ -44,9 +44,9 @@ const MobileNavBar = ({buttonChange,MobileMenuClose }) => {
              transition={{ type: 'spring', stiffness: 300, damping: 100, duration: 1,}}>
                 <div className="MobileMenu">
                     <ul className="MobileNavList">
-                        <Link to="/" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>destroy</motion.li></Link>
-                        <Link to="/Menu" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>destroy</motion.li></Link>
-                        <Link to="/Delivery" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>destroy</motion.li></Link>
+                        <Link to="/" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Home</motion.li></Link>
+                        <Link to="/Delivery" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
+                        <Link to="/Cart" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>View Cart</motion.li></Link>
                     </ul>
                 </div>
             </motion.nav>
