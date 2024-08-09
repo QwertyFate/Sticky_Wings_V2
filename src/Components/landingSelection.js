@@ -38,7 +38,7 @@ const LandingSelection = () => {
         transition={{ease:"easeInOut", duration: 3}}
         className="OrderNowContainer">
             <img className="OrderNowPic" src={orderNowPic} />
-            <Link to={"/Menu"} className="OrderNowButtonLink">
+            <Link to={"/Delivery"} className="OrderNowButtonLink">
                 <div className="OrderNowButtonContainer">
                     <motion.button className="OrderNowButton"
                     whileHover={{scale: 1.1}}

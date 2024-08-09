@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gochi+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.DeliverySection {
+    padding-top: 100px;
+}
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding-left: 0vw;
+}
+
+.carouselItem {
+    padding: auto 0;
+}
+
+.nameTitle {
+    font-size: 50px;
+    align-items: center;
+    color: #fff;
+    text-align: justify;
+    font-family: "Bebas Neue"
+}
+

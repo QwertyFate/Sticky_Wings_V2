@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gochi+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+.productCardContainer {
+    width: 180px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+.productCardImg {
+    width: auto;
+    height: 150px;
+}
+
+.productCardName {
+    font-size: 22px;
+    font-family: "Bebas Neue";
+    color: #fff;
+}

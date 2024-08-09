@@ -10,8 +10,8 @@ import {
   Link
 } from 'react-router-dom';
 import LandingPage from "./Pages/LandingPage.js"
-import MenuPage from './Pages/Menu.js';
 import DeliveryPage from './Pages/DeliveryPage.js';
+import DeliveryStart from './Pages/DeliveryStart.js';
 
 const App=()=> {
   return (
@@ -19,8 +19,8 @@ const App=()=> {
     <Routes>
       <Route path='/' element={<NavBar />} >
       <Route index element={<LandingPage />} />
-      <Route path='/Menu' element={<MenuPage />}></Route>
-      <Route path='/Delivery' element={<DeliveryPage />}></Route>
+      <Route path='/Delivery' element={<DeliveryStart />}></Route>
+      <Route path='/Delivery/Menu' element={<DeliveryPage />}></Route>
       </Route>
     </Routes>
       

@@ -38,10 +38,10 @@ const MobileNavBar = ({buttonChange,MobileMenuClose }) => {
     return(
         <AnimatePresence>
             <motion.nav className="mobileNavBar"
-             initial={{ opacity: 0, y: -50 }}
-             animate={{ opacity: 1, y: 0 }}
+             initial={{ opacity: 0}}
+             animate={{ opacity: 1}}
              exit={{ opacity: 0, y: -50 }}
-             transition={{ type: 'spring', stiffness: 300, damping: 100, duration: 1,}}>
+             transition={{stiffness: 300, damping: 100, duration: 1,}}>
                 <div className="MobileMenu">
                     <ul className="MobileNavList">
                         <Link to="/" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Home</motion.li></Link>

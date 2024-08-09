@@ -85,7 +85,7 @@ import LandingImageMobile2 from "../Components/pics/Sticky_Wings_Cold_Brew_Landi
         autoPlaySpeed={5000}
         focusOnSelect={true}
         className="ImgContainer">
-            <div><Link to="/Menu"><img className="LandingPageImg" src={imageSrc} /></Link></div>
+            <div><Link to="/Delivery"><img className="LandingPageImg" src={imageSrc} /></Link></div>
             <div><img className="LandingPageImg2" src={isImageTwo} /></div>
         </Carousel>
         {/* <div className="BlockImg"><img src={BlockImage}/></div> */}
