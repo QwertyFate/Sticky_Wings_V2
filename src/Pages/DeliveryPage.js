@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { WingsClassicData } from "../Utils/WingsMenu";
-import ProductListing from "../Components/productListing.js";
+import ProductListing from "../Components/DeliveryPage/productListing.js";
 import "./DeliveryPage.css";
 import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
-import testPic from "../Components/pics/GameBoy_Classic_Flavors.png";
 import { WingsPremiumData } from "../Utils/WingsMenu";
 import {PastaData} from "../Utils/PastaData.js";
 import {RiceBowlData} from "../Utils/RiceBowlsData.js";
@@ -13,11 +12,17 @@ import {WafflesData} from "../Utils/WafflesData.js";
 import {WaffwichAndPocketsData} from "../Utils/WaffwichAndPocketsData.js"
 import {DrinksData} from "../Utils/Drinks.js";
 import {BigOrdersData} from "../Utils/BigOrders.js";
-import { Link } from "react-router-dom";
+import SearchButtons from "../Components/DeliveryPage/productListingSearch.js"
+import { buttonData } from "../Utils/ButtonforDeliverySearch.js";
+import  SearchButtonsCategory from "../Components/DeliveryPage/searchButtonCategory.js";
 
 const DeliveryPage = () => {
 
-    const testCarousel = ["hello", "hi"]
+    const [activeIndex, setActiveIndex] = useState(null);
+    const handleWhatisActive = (index) => {
+        setActiveIndex(index === activeIndex? null : index);
+        console.log(index);
+    }
 
     const responsive = {
         superLargeDesktop: {
@@ -66,12 +71,26 @@ const DeliveryPage = () => {
      const bigorders = BigOrdersData.map((data, key) => (
         <ProductListing name={data.name} image={data.image}/>
      ))
+     const buttonorders = buttonData.map((data, index) => (
+        <SearchButtons name={data.name} data={data.data} key={index} isActive={index === activeIndex} onToggle={() => handleWhatisActive(index)}/>
+     ))
+     const buttonsCategory = buttonData.map((data, index) => (
+        <SearchButtonsCategory name={data.name} isActive={index === activeIndex} onToggle={() => handleWhatisActive(index)} />
+     ))
      
-
+     
     
     return(
             <div className="DeliverySection">
-                <a href="#bigorders"><button> hello</button></a>
+                <div className="buttonOrdersContainer">
+                <Carousel
+                responsive={responsive}
+                itemClass="carouselItemCategory"
+                containerClass="carouselCategoryContainer">
+                {buttonsCategory}
+                </Carousel>
+                {buttonorders}
+                </div>
                 <h2 className="nameTitle" id="Wings">Wings</h2>
                 <Carousel
                 responsive={responsive}

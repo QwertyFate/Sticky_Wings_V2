@@ -5,6 +5,15 @@
 }
 
 
+.itemNameCarouselParentSearch {
+    position: absolute;
+    left: 0;
+}
+
+.buttonOrdersContainer {
+    margin-bottom: 300px;
+}
+
 .carousel {
     display: flex;
     align-items: center;
@@ -14,7 +23,22 @@
 
 .carouselItem {
     padding: auto 0;
+
 }
+
+.carouselCategoryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselItemCategory {
+    font-size: 25px;
+    color: #fff;
+    font-family: "Bebas Neue";
+    text-align: center;
+
+} 
 
 .nameTitle {
     font-size: 50px;

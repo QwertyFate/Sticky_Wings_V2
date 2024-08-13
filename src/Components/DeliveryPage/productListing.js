@@ -1,10 +1,8 @@
 import React from "react";
 import "./productListing.css"
-import TestImg from "./pics/Menu png/Wings/Classic/Aloha_Teriyaki.png"
 import { motion } from "framer-motion";
 
 const ProductListing = (props) => {
-    console.log(props)
     return(
         <motion.div className="productCardContainer"
         whileHover={{scale:1.1}}

@@ -1,0 +1,17 @@
+.searchContainer {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.carouselSearch {
+
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+    left: 0;
+    z-index: 1;
+}
+
+

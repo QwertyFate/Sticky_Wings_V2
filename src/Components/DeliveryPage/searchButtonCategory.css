@@ -1,0 +1,8 @@
+.searchButtonCategory {
+    color: #fff;
+    cursor: pointer;
+}
+
+.searchButtonCategory:hover {
+    text-shadow: 2px 2px #ec2020;
+}

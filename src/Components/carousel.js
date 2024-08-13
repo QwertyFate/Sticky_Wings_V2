@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import LandingImage from "../Components/pics/Sticky_Wings_Landing_Page_2_Version_3.png";
 import LandingImage2 from "../Components/pics/Sticky_Wings_Cold_Brew_Landing_Page_for_web.png";
-import BlockImage from "./pics/block.png";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 import 'react-multi-carousel/lib/styles.css';
 import './carousel.css'
-import { motion, useScroll } from "framer-motion";
+import { motion} from "framer-motion";
 import LandingImageMobile from "../Components/pics/Sticky_Wings_Landing_Page_2_Mobile.png"
 import LandingImageMobile2 from "../Components/pics/Sticky_Wings_Cold_Brew_Landing_Page_Mobile.png"
 
