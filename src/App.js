@@ -12,6 +12,7 @@ import {
 import LandingPage from "./Pages/LandingPage.js"
 import DeliveryPage from './Pages/DeliveryPage.js';
 import DeliveryStart from './Pages/DeliveryStart.js';
+import SlugPage from './Pages/SlugPage.js';
 
 const App=()=> {
   return (
@@ -21,6 +22,7 @@ const App=()=> {
       <Route index element={<LandingPage />} />
       <Route path='/Delivery' element={<DeliveryStart />}></Route>
       <Route path='/Delivery/Menu' element={<DeliveryPage />}></Route>
+      <Route path="/Delivery/:slug" element={<SlugPage />}></Route>
       </Route>
     </Routes>
       

@@ -28,7 +28,7 @@ const DeliveryPage = () => {
         superLargeDesktop: {
           // the naming can be any, depends on you.
           breakpoint: { max: 1920, min: 1300 },
-          items: 8
+          items: 7
         },
         desktop: {
           breakpoint: { max: 1299, min: 1200 },
@@ -45,31 +45,31 @@ const DeliveryPage = () => {
       };
 
      const wingsclassic = WingsClassicData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ));
      const wingspremium = WingsPremiumData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const pasta = PastaData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const ricebowl = RiceBowlData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const stickybites = StickyBitesData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const waffles = WafflesData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const waffwichandpockets = WaffwichAndPocketsData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const drinks = DrinksData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const bigorders = BigOrdersData.map((data, key) => (
-        <ProductListing name={data.name} image={data.image}/>
+        <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
      const buttonorders = buttonData.map((data, index) => (
         <SearchButtons name={data.name} data={data.data} key={index} isActive={index === activeIndex} onToggle={() => handleWhatisActive(index)}/>

@@ -10,9 +10,6 @@
     left: 0;
 }
 
-.buttonOrdersContainer {
-    margin-bottom: 300px;
-}
 
 .carousel {
     display: flex;
@@ -26,9 +23,12 @@
 
 }
 
+.buttonOrdersContainer {
+    margin-bottom: 300px;
+}
+
 .carouselCategoryContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 

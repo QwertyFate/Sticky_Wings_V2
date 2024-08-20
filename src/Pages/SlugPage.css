@@ -1,0 +1,52 @@
+.MainDetails {
+    display: flex;
+    flex-direction: row;
+    margin: auto auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.SlugImage {
+    width: 650px;
+    padding-left: 200px;
+}
+
+.flavorList {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    margin: 30px;
+    padding: auto 10px;
+}
+
+.NameWingsFlavors {
+    text-align: start;
+}
+
+.FlavorsSelect {
+    cursor: pointer;
+    border: 1px solid #fff;
+    text-align: center;
+    margin: 10px;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.FlavorsSelect.selected{
+    background-color: #a53513;
+}
+
+.FlavorsSelect:hover {
+    color: #e9d9d9;
+    background-color: #a53513;
+}
+
+.ProductDetails {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}

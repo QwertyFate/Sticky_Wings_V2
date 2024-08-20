@@ -30,7 +30,7 @@ const SearchButtons = ({ data, isActive }) => {
 
 
     const cardSearch = data.map((item, key) => (
-        <ProductListing name={item.name} image={item.image} key={key} />
+        <ProductListing name={item.name} image={item.image} key={key} slug={item.slug} />
      ));
 
 
