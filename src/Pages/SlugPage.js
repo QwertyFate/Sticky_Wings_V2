@@ -5,7 +5,8 @@ import "./SlugPage.css"
 import { WingsClassicData } from "../Utils/WingsMenu";
 import { WingsPremiumData } from "../Utils/WingsMenu";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../store/cart";
 
 const SlugPage = () => {
     const [detail, setDetail] = useState([]);
@@ -14,7 +15,12 @@ const SlugPage = () => {
     const [nameChange, setNameChange] = useState("")
     const [selectedFlavors, setSelectedFlavors] = useState([])
     const [maxFlavors, setMaxFlavors] = useState(1)
+    const [image, setImage] = useState("")
+    const availableFlavor = maxFlavors - selectedFlavors.length;
     const carts = useSelector(store => store.cart.items);
+    const dispatch = useDispatch();
+    const realName = `${nameChange} ${detail.category === "wings" || detail.category === "pasta" ? `(${selectedFlavors})` : ""}`
+
     let ClassicFlavorsWings = null;
     let PremiumFlavorsWings = null;
     let VariationType;
@@ -24,6 +30,7 @@ const SlugPage = () => {
         if (ObtainedData.length > 0 ) {
             setDetail(ObtainedData[0]);
             setNameChange(ObtainedData[0].name);
+            setImage(ObtainedData[0].image);
             if(ObtainedData[0].price){
             setItemPrice(ObtainedData[0].price);
             };
@@ -31,6 +38,14 @@ const SlugPage = () => {
  
     },[slug]);
 
+    const handleAddToCart = () => {
+        dispatch(addToCart({
+            ItemName: realName,
+            quantity: 1,
+            price: itemPrice,
+            picture: image
+        }))
+    }
 
 
     useEffect(() => {
@@ -75,8 +90,8 @@ const SlugPage = () => {
     if (detail.category === "pasta")
         VariationType =
                 <div>
-                <button onClick={() => {setItemPrice(detail.soloPrice)}}><h2>Solo</h2></button>
-                <button onClick={() => {setItemPrice(detail.sharingPrice)}}><h2>Sharing</h2></button>
+                <button onClick={() => (setItemPrice(detail.soloPrice), setSelectedFlavors(["Solo"]))}><h2>Solo</h2></button>
+                <button onClick={() => (setItemPrice(detail.sharingPrice), setSelectedFlavors(["Sharing"]))}><h2>Sharing</h2></button>
                 </div>
 
     if (detail.category === "wings") {
@@ -91,6 +106,7 @@ const SlugPage = () => {
 
         ClassicFlavorsWings = 
         <div className="FlavorsContainerDetails">
+            <h1 className="NameWingsFlavors"> {availableFlavor == 1 ?  "You can choose 1 more flavor" : `Choose ${availableFlavor} flavors`}</h1>
             <h1 className="NameWingsFlavors">Classic Flavors</h1>
             <div className="flavorList">
                 {WingsClassicData.map((data, index) => (
@@ -130,8 +146,7 @@ const SlugPage = () => {
                     {ClassicFlavorsWings}
                     {PremiumFlavorsWings}
                 </div>
-                
-                
+                <button onClick={handleAddToCart} className="addToCartButton">Add to Cart</button>                
                
 
             </div>

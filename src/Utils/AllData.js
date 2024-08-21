@@ -435,9 +435,9 @@ export const AllData = [
         image: WingsSaltedEgg,
         description: "",
         slug: "Salted-Egg",
-        clutchPrice: 215,
-        peepPrice: 330,
-        flockPrice: 375,
+        clutchPrice: 200,
+        peepPrice: 315,
+        flockPrice: 350,
         category: "wings"
     },
     {
@@ -446,9 +446,9 @@ export const AllData = [
         image: WingsInferno,
         description: "",
         slug: "Inferno",
-        clutchPrice: 215,
-        peepPrice: 330,
-        flockPrice: 375,
+        clutchPrice: 200,
+        peepPrice: 315,
+        flockPrice: 350,
         category: "wings"
     },
     {
@@ -457,9 +457,9 @@ export const AllData = [
         image: WingsDakgangjeong,
         description: "",
         slug: "Dakgangjeong",
-        clutchPrice: 215,
-        peepPrice: 330,
-        flockPrice: 375,
+        clutchPrice: 200,
+        peepPrice: 315,
+        flockPrice: 350,
         category: "wings"
     },
     {
@@ -468,9 +468,9 @@ export const AllData = [
         image: WingsMoonshineZest,
         description: "",
         slug: "Moonshine-Zest",
-        clutchPrice: 215,
-        peepPrice: 330,
-        flockPrice: 375,
+        clutchPrice: 200,
+        peepPrice: 315,
+        flockPrice: 350,
         category: "wings"
     },
 ]

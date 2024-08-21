@@ -5,12 +5,13 @@ import { Link, Outlet } from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faBars, faX} from '@fortawesome/free-solid-svg-icons'
 import { motion, AnimatePresence} from "framer-motion";
+import CartTab from "./CartTab";
 
 
 
 
 
-const DesktopNavBar = ({buttonChange, Changebutton}) => {
+const DesktopNavBar = ({buttonChange, Changebutton, showcart}) => {
    
 
     return(
@@ -24,7 +25,7 @@ const DesktopNavBar = ({buttonChange, Changebutton}) => {
                         <ul className="MenuList">
                         <Link className="MenuListItem" to="/"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}} >Home</motion.li></Link>
                         <Link className="MenuListItem" to="/Delivery"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
-                        <Link className="MenuListItem" to="/Cart"> <motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>View Cart</motion.li></Link>
+                        <div className="MenuListItem" onClick={showcart}> <motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>View Cart</motion.li></div>
                             
                         </ul>
                     </div>
@@ -57,7 +58,7 @@ const MobileNavBar = ({buttonChange,MobileMenuClose }) => {
 
 
 const NavBar = () => {
-
+    const [showCart, setShowCart] = useState(false)
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
 
     
@@ -71,6 +72,9 @@ const NavBar = () => {
         }
     }, []);
 
+    const changeShowCart = () => {
+        setShowCart(!showCart);
+    }
     const [buttonChange, setButtonChange] = useState(false);
     const Changebutton = () => {
     setButtonChange(!buttonChange);
@@ -82,9 +86,10 @@ const NavBar = () => {
    
     return (
     <div className="NavBar">
-        <DesktopNavBar Changebutton={Changebutton} buttonChange={buttonChange}/>
+        <DesktopNavBar Changebutton={Changebutton} buttonChange={buttonChange} showcart={changeShowCart}/>
         {isMobile && buttonChange? <MobileNavBar buttonChange={buttonChange} MobileMenuClose={MobileMenuClose} /> : null}
         <Outlet />
+        {showCart? <CartTab /> : null}
     </div>
     )
 };

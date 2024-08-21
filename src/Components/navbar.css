@@ -66,6 +66,7 @@ z-index: 9999;
     font-family: "Bebas Neue";
     font-size: 30px;
     text-decoration: none;   
+    cursor: pointer;
 }
 
 .MenuListItem:hover {

@@ -3,9 +3,15 @@ import cartReducer from "./cart";
 import cart from "./cart";
 
 
-export const store = configureStore ({
+// export const store = configureStore ({
+//     reducer: {
+//         cart: cartReducer,
+        
+//     }
+// })
+
+export const store = configureStore({
     reducer: {
         cart: cartReducer,
-        
     }
 })
