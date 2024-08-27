@@ -5,13 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { AuthProvider } from './Auth/Auth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <React.StrictMode>
-    <Provider store={store}>
-        <App />
-    </Provider>
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID_GOOGLE}>
+        <Provider store={store}>
+            <AuthProvider>
+                <App />
+            </AuthProvider>
+        </Provider>
+    </GoogleOAuthProvider>
 </React.StrictMode>
 );
 

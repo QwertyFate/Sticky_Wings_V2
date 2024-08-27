@@ -24,7 +24,7 @@ const DesktopNavBar = ({buttonChange, Changebutton, showcart}) => {
                     <div>
                         <ul className="MenuList">
                         <Link className="MenuListItem" to="/"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}} >Home</motion.li></Link>
-                        <Link className="MenuListItem" to="/Delivery"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
+                        <Link className="MenuListItem" to="/Delivery/Menu"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
                         <div className="MenuListItem" onClick={showcart}> <motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>View Cart</motion.li></div>
                             
                         </ul>
@@ -35,7 +35,7 @@ const DesktopNavBar = ({buttonChange, Changebutton, showcart}) => {
     );
 };
 
-const MobileNavBar = ({buttonChange,MobileMenuClose }) => {
+const MobileNavBar = ({buttonChange,MobileMenuClose, showcart }) => {
     return(
         <AnimatePresence>
             <motion.nav className="mobileNavBar"
@@ -46,8 +46,8 @@ const MobileNavBar = ({buttonChange,MobileMenuClose }) => {
                 <div className="MobileMenu">
                     <ul className="MobileNavList">
                         <Link to="/" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Home</motion.li></Link>
-                        <Link to="/Delivery" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
-                        <Link to="/Cart" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>View Cart</motion.li></Link>
+                        <Link to="/Delivery/Menu" onClick={MobileMenuClose} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>Menu</motion.li></Link>
+                        <div onClick={()=> {MobileMenuClose(); showcart()}} className="MobileNavListItem"><motion.li whileHover={{scale: 1.2}} transition={{duration:0.2}}>View Cart</motion.li></div>
                     </ul>
                 </div>
             </motion.nav>
@@ -87,9 +87,9 @@ const NavBar = () => {
     return (
     <div className="NavBar">
         <DesktopNavBar Changebutton={Changebutton} buttonChange={buttonChange} showcart={changeShowCart}/>
-        {isMobile && buttonChange? <MobileNavBar buttonChange={buttonChange} MobileMenuClose={MobileMenuClose} /> : null}
+        {isMobile && buttonChange? <MobileNavBar buttonChange={buttonChange} MobileMenuClose={MobileMenuClose} showcart={changeShowCart} /> : null}
         <Outlet />
-        {showCart? <CartTab /> : null}
+        {showCart? <CartTab  showCart= {() => setShowCart() } /> : null}
     </div>
     )
 };

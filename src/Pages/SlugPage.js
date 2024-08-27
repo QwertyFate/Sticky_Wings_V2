@@ -16,10 +16,14 @@ const SlugPage = () => {
     const [selectedFlavors, setSelectedFlavors] = useState([])
     const [maxFlavors, setMaxFlavors] = useState(1)
     const [image, setImage] = useState("")
+    const [variantselected, setVariantSelected] = useState(false);
+    const [variantClicked, setVariantClicked] = useState('');
     const availableFlavor = maxFlavors - selectedFlavors.length;
+    const [popUpTrigger, setPopUpTrigger] = useState(false);
+
     const carts = useSelector(store => store.cart.items);
     const dispatch = useDispatch();
-    const realName = `${nameChange} ${detail.category === "wings" || detail.category === "pasta" ? `(${selectedFlavors})` : ""}`
+    const realName = `${nameChange} ${detail.category === "wings" || detail.category === "pasta" || detail.category === "wingsbox" ? `(${selectedFlavors})` : ""}`
 
     let ClassicFlavorsWings = null;
     let PremiumFlavorsWings = null;
@@ -45,7 +49,17 @@ const SlugPage = () => {
             price: itemPrice,
             picture: image
         }))
+        setPopUpTrigger(true);
+    setTimeout(() => {
+        setPopUpTrigger(false);
+    }, 2000);
     }
+
+    useEffect(() =>{
+        if (detail.category === "wingsbox") {
+            setMaxFlavors(3);
+        }
+    },[detail])
 
 
     useEffect(() => {
@@ -75,6 +89,7 @@ const SlugPage = () => {
         setNameChange(newName);
         setItemPrice(newPrice);
         setSelectedFlavors([]);
+        setVariantSelected(true);
     };
 
     const handleFlavorSelection = (flavor) => {
@@ -86,23 +101,50 @@ const SlugPage = () => {
         }
     }
 
-
     if (detail.category === "pasta")
         VariationType =
-                <div>
-                <button onClick={() => (setItemPrice(detail.soloPrice), setSelectedFlavors(["Solo"]))}><h2>Solo</h2></button>
-                <button onClick={() => (setItemPrice(detail.sharingPrice), setSelectedFlavors(["Sharing"]))}><h2>Sharing</h2></button>
+                <div className="VariationContainer">
+                <motion.button className={`variationButton ${variantClicked === "Solo" ? "selected" : ""}`} onClick={() => (setItemPrice(detail.soloPrice), setSelectedFlavors(["Solo"]), setVariantSelected(true), setVariantClicked("Solo"))}
+                whileHover={{scale:"1.2"}}
+                whileTap={{scale:"0.8"}}
+                >
+                    <h2>Solo</h2>
+                </motion.button>
+                <motion.button className={`variationButton ${variantClicked === "Sharing" ? "selected" : ""}` }onClick={() => (setItemPrice(detail.sharingPrice), setSelectedFlavors(["Sharing"]), setVariantSelected(true), setVariantClicked("Sharing"))}
+                whileHover={{scale:"1.2"}}
+                whileTap={{scale:"0.8"}}
+                >
+                    <h2>Sharing</h2>
+                </motion.button>
                 </div>
 
     if (detail.category === "wings") {
         VariationType =
-                <div>
-                <button onClick={() => (handleChange("Clutch Wings(6pcs)", detail.clutchPrice), setMaxFlavors(1))}><h2>Clutch(6pcs)</h2></button>
-                <button onClick={() => (handleChange("Peep Wings(10pcs)", detail.peepPrice), setMaxFlavors(2))}><h2>Peeps(10pcs)</h2></button>
-                <button onClick={() => (handleChange("Flock Wings(12pcs)", detail.flockPrice), setMaxFlavors(2))}><h2>Flock(12pcs)</h2></button>
+                <div className="VariationContainer">
+                <motion.button className={`variationButton ${variantClicked === "Clutch(6pcs)" ? "selected" : ""}`} onClick={() => (handleChange("Clutch Wings(6pcs)", detail.clutchPrice), setMaxFlavors(1), setVariantClicked("Clutch(6pcs)"))}
+                whileHover={{scale:"1.2"}}
+                whileTap={{scale:"0.8"}}
+                >
+                    <h2>Clutch(6pcs)</h2>
+                </motion.button>
+                <motion.button className={`variationButton ${variantClicked === "Peeps(10pcs)" ? "selected" : ""}`} onClick={() => (handleChange("Peep Wings(10pcs)", detail.peepPrice), setMaxFlavors(2), setVariantClicked("Peeps(10pcs)"))}
+                whileHover={{scale:"1.2"}}
+                whileTap={{scale:"0.8"}}
+                >
+                    <h2>Peeps(10pcs)</h2>
+                </motion.button>
+                <motion.button className={`variationButton ${variantClicked === "Flock(12pcs)" ? "selected" : ""}`} onClick={() => (handleChange("Flock Wings(12pcs)", detail.flockPrice), setMaxFlavors(2), setVariantClicked("Flock(12pcs)"))}
+                whileHover={{scale:"1.2"}}
+                whileTap={{scale:"0.8"}}
+                >
+                    <h2>Flock(12pcs)</h2>
+                </motion.button>
                 </div>
     
-        
+    }
+    if (detail.category === "wings" || detail.category === "wingsbox") {
+
+       
 
         ClassicFlavorsWings = 
         <div className="FlavorsContainerDetails">
@@ -131,22 +173,28 @@ const SlugPage = () => {
             </div>
         </div>
 }   
-      
+    
 
     return(
         <div className="MainDetails">
             <img src={detail.image} className="SlugImage" />
             <div className="ProductDetails">
-                 <h2>{`₱${itemPrice}`}</h2>
                 <h1>{nameChange}</h1>
-                {VariationType}
                 <p>{selectedFlavors.join(",")}</p>
                 <p>{detail.description}</p>
+                <h2>{`₱${itemPrice}`}</h2>
+                {VariationType}
+                
+                
                 <div>
                     {ClassicFlavorsWings}
                     {PremiumFlavorsWings}
                 </div>
-                <button onClick={handleAddToCart} className="addToCartButton">Add to Cart</button>                
+                {popUpTrigger? <p className="Popup">Item Added to Cart</p> : null}
+                
+                <motion.button
+                 onClick={handleAddToCart} disabled={!variantselected && (detail.category === "wings" || detail.category === "pasta" )} className="addToCartButton"
+                 whileTap={{scale: "0.8"}}>Add to Cart</motion.button>                
                
 
             </div>

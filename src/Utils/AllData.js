@@ -33,7 +33,7 @@ import WingsParmesanGarlic from "../Components/pics/Menu png/Wings/Classic/Parme
 import WingsSaltandPepper from "../Components/pics/Menu png/Wings/Classic/Salt_and_Pepper.png"
 import WingsSoyGarlic from "../Components/pics/Menu png/Wings/Classic/Soy_Garlic.png"
 import WingsThaiGlazed from "../Components/pics/Menu png/Wings/Classic/Thai_Glazed.png"
-import WingsMangoRojo from "../Components/pics/Menu png/Wings/Classic/rojo.jpg"
+import WingsMangoRojo from "../Components/pics/Menu png/Wings/Classic/rojo.png"
 import WingsDakgangjeong from "../Components/pics/Menu png/Wings/Premium/Dakgangjeong.JPG.png"
 import WingsInferno from "../Components/pics/Menu png/Wings/Premium/Inferno.JPG.png"
 import WingsMoonshineZest from "../Components/pics/Menu png/Wings/Premium/Moonshine_Zest.JPG.png"
@@ -51,7 +51,8 @@ export const AllData = [
         image: CoopBox,
         description: "",
         price: 1300,
-        slug: "CoopBox"
+        slug: "CoopBox",
+        category: "wingsbox"
     },
     {
         id:"502",
@@ -59,7 +60,8 @@ export const AllData = [
         image: CoopBox,
         description: "",
         price: 800,
-        slug: "Mini-Coop-Box"
+        slug: "Mini-Coop-Box",
+        category: "wingsbox"
     },
     {
         id:"503",
@@ -67,7 +69,8 @@ export const AllData = [
         image: CoopBox,
         description: "",
         price: 1300,
-        slug: "CoopMix"
+        slug: "CoopMix",
+        category: "wingsbox"
     },
     {
         id:"1001",

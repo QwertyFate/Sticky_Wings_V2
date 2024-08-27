@@ -11,6 +11,7 @@ import {StickyBitesData} from "../Utils/StickyBitesData.js";
 import {WafflesData} from "../Utils/WafflesData.js";
 import {WaffwichAndPocketsData} from "../Utils/WaffwichAndPocketsData.js"
 import {DrinksData} from "../Utils/Drinks.js";
+import { SnacksData } from "../Utils/SnacksData.js";
 import {BigOrdersData} from "../Utils/BigOrders.js";
 import SearchButtons from "../Components/DeliveryPage/productListingSearch.js"
 import { buttonData } from "../Utils/ButtonforDeliverySearch.js";
@@ -56,6 +57,9 @@ const DeliveryPage = () => {
      const ricebowl = RiceBowlData.map((data, key) => (
         <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
+     const appetizers = SnacksData.map((data, key) => (
+      <ProductListing name={data.name} image={data.image} slug={data.slug}/>
+   ));
      const stickybites = StickyBitesData.map((data, key) => (
         <ProductListing name={data.name} image={data.image} slug={data.slug}/>
      ))
@@ -112,6 +116,13 @@ const DeliveryPage = () => {
                 containerClass="carousel"
                 itemClass="carouselItem">
                     {ricebowl}
+                </Carousel>
+                <h2 className="nameTitle">Appetizers</h2>
+                <Carousel
+                responsive={responsive}
+                containerClass="carousel"
+                itemClass="carouselItem">
+                    {appetizers}
                 </Carousel>
                 <h2 className="nameTitle">StickyBites</h2>
                 <Carousel

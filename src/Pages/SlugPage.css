@@ -2,14 +2,47 @@
     display: flex;
     flex-direction: row;
     margin: auto auto;
-    width: 100%;
+    width: 80%;
     justify-content: space-evenly;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    background-color: rgb(31, 31, 31);
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 
 .SlugImage {
-    width: 650px;
-    padding-left: 200px;
+    width: 500px;
+    height: 500px;
+    
+    @media screen and (max-width: 1200px) {
+        align-self: center;
+        height: 250px;
+        width: 250px;
+        padding-left: 0px;
+
+    }
+}
+
+.VariationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.variationButton{
+    font-size: 10px;
+    width: 100px;
+    padding: auto 50px;
+    margin-left: 5px;
+    background-color: rgb(255, 136, 0);
+    border-radius: 50px;
+
 }
 
 .flavorList {
@@ -18,10 +51,20 @@
     gap: 10px;
     margin: 30px;
     padding: auto 10px;
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: repeat(3,1fr);
+        gap: 0;
+        margin: 5px;
+        align-items: center;
+    }
 }
 
 .NameWingsFlavors {
     text-align: start;
+    @media screen and (max-width: 1300px) {
+       text-align: center;
+    }
 }
 
 .FlavorsSelect {
@@ -31,9 +74,17 @@
     margin: 10px;
     border-radius: 50px;
     padding: 5px;
+    @media screen and (max-width: 1300px) {
+        font-size: 12px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
 }
 
-.FlavorsSelect.selected{
+.FlavorsSelect.selected, .variationButton.selected{
     background-color: #a53513;
 }
 
@@ -52,7 +103,28 @@
 }
 
 .addToCartButton {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    background-color: rgb(255, 136, 0);;
+    width: 300px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.Popup {
+    background-color: white;
+    color: black;
     width: 200px;
-    height: 100px;
-    font-size: 30px;
+    height: 25px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.5s ease;
 }

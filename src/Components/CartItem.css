@@ -1,0 +1,17 @@
+.TrashIcon:hover {
+    color: rgb(150, 143, 143);
+
+}
+
+.TrashIcon{
+    cursor: pointer;
+    padding-left: 50px;
+    display: flex;
+}
+
+
+.NameAndQty {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+}

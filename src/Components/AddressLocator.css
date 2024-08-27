@@ -1,0 +1,14 @@
+.ContainerForTheWholeMap {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adjust as needed */
+    width: 200px; /* Adjust as needed */
+    flex-direction: column;
+}
+
+.InputBox{
+    width: 350px;
+    height: 20px;
+    font-size: 20px;
+    border: 2px solid gray;
+}

@@ -8,7 +8,7 @@ import WingsParmesanGarlic from "../Components/pics/Menu png/Wings/Classic/Parme
 import WingsSaltandPepper from "../Components/pics/Menu png/Wings/Classic/Salt_and_Pepper.png"
 import WingsSoyGarlic from "../Components/pics/Menu png/Wings/Classic/Soy_Garlic.png"
 import WingsThaiGlazed from "../Components/pics/Menu png/Wings/Classic/Thai_Glazed.png"
-import WingsMangoRojo from "../Components/pics/Menu png/Wings/Classic/rojo.jpg"
+import WingsMangoRojo from "../Components/pics/Menu png/Wings/Classic/rojo.png"
 import WingsDakgangjeong from "../Components/pics/Menu png/Wings/Premium/Dakgangjeong.JPG.png"
 import WingsInferno from "../Components/pics/Menu png/Wings/Premium/Inferno.JPG.png"
 import WingsMoonshineZest from "../Components/pics/Menu png/Wings/Premium/Moonshine_Zest.JPG.png"

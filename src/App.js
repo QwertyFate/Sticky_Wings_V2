@@ -13,6 +13,8 @@ import LandingPage from "./Pages/LandingPage.js"
 import DeliveryPage from './Pages/DeliveryPage.js';
 import DeliveryStart from './Pages/DeliveryStart.js';
 import SlugPage from './Pages/SlugPage.js';
+import CheckOutPage from './Pages/CheckOutPage.js';
+import ProtectedRoute from "./Components/ProtectedRoute.js"
 
 const App=()=> {
   return (
@@ -23,6 +25,7 @@ const App=()=> {
       <Route path='/Delivery' element={<DeliveryStart />}></Route>
       <Route path='/Delivery/Menu' element={<DeliveryPage />}></Route>
       <Route path="/Delivery/:slug" element={<SlugPage />}></Route>
+      <Route path="/Checkout" element={<ProtectedRoute element={CheckOutPage} />}></Route>
       </Route>
     </Routes>
       
